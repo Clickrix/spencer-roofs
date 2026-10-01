@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spencer Roofs Inc. | Elmhurst’s Local Roofer | Elmhurst, IL</title>
+<meta name="description" content="Spencer Roofs Inc. — new roof installation, repair, reroofs and tear-offs in Elmhurst and DuPage County. A+ BBB rating. Free estimates. Call 630-244-7663.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --primary:#1d4ed8; --accent:#f59e0b; --dark:#0b1e3a; --light:#f6f9ff; --text:#334155;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;color:var(--text);line-height:1.65;background:#fff}
+h1,h2,h3{font-family:'Archivo','Inter',sans-serif;line-height:1.2;color:var(--dark)}
+a{text-decoration:none}
+.container{max-width:1140px;margin:0 auto;padding:0 22px}
+/* Nav */
+.nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(8px);box-shadow:0 1px 12px rgba(0,0,0,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:14px 22px;max-width:1140px;margin:0 auto}
+.brand{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.35rem;color:var(--dark);letter-spacing:-.02em}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--text);font-weight:600;font-size:.95rem}
+.nav-links a:hover{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;padding:14px 32px;border-radius:10px;font-size:1.02rem;transition:transform .15s,box-shadow .15s;box-shadow:0 6px 20px rgba(0,0,0,.18);border:none;cursor:pointer}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.btn-outline{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.7);box-shadow:none}
+.btn-sm{padding:10px 22px;font-size:.92rem}
+@media(max-width:760px){.nav-links a:not(.btn){display:none}}
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--dark) 0%,#173eab 55%,var(--primary) 100%);color:#fff;padding:96px 0 88px;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:-80px;right:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,#f59e0b 0%,transparent 70%);opacity:.5}
+.hero h1{font-size:clamp(2.1rem,5vw,3.4rem);color:#fff;letter-spacing:-.02em;margin-bottom:18px;max-width:640px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.15rem;max-width:600px;opacity:.92;margin-bottom:32px}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-badges{display:flex;gap:22px;flex-wrap:wrap;margin-top:40px;font-size:.92rem;font-weight:600;opacity:.92}
+.hero-badges span{display:flex;align-items:center;gap:8px}
+.hero-badges i{font-style:normal;background:rgba(255,255,255,.15);width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.85rem}
+/* Trust strip */
+.trust{background:var(--light);padding:34px 0;border-bottom:1px solid #e7e7e7}
+.trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;text-align:center}
+.trust-item strong{display:block;font-family:'Archivo',sans-serif;font-size:1.5rem;color:var(--dark)}
+.trust-item span{font-size:.9rem;color:#666}
+/* Sections */
+section{padding:76px 0}
+.sec-kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:700;color:var(--accent);margin-bottom:10px}
+.sec-title{font-size:clamp(1.6rem,3.4vw,2.4rem);margin-bottom:14px;letter-spacing:-.015em}
+.sec-sub{max-width:660px;color:#555;margin-bottom:44px;font-size:1.06rem}
+/* Services */
+.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.svc{background:#fff;border:1px solid #e9e9e9;border-radius:14px;padding:30px 26px;transition:transform .15s,box-shadow .15s}
+.svc:hover{transform:translateY(-4px);box-shadow:0 14px 34px rgba(0,0,0,.10)}
+.svc-icon{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--primary),#173eab);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:18px}
+.svc h3{font-size:1.15rem;margin-bottom:10px}
+.svc p{font-size:.95rem;color:#555}
+/* Why */
+.why{background:var(--dark);color:#eee}
+.why h2{color:#fff}
+.why .sec-sub{color:#bbb}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.why-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px 24px}
+.why-card h3{color:#fff;font-size:1.1rem;margin-bottom:8px}
+.why-card p{font-size:.93rem;color:#c8c8c8}
+.why-card .n{font-family:'Archivo',sans-serif;font-weight:800;font-size:2rem;color:var(--accent);opacity:.9}
+/* Testimonials / process */
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.t-card{background:var(--light);border-radius:14px;padding:28px 26px;border:1px solid #e9e9e9}
+.stars{color:#f5a623;font-size:1.05rem;letter-spacing:2px;margin-bottom:12px}
+.t-card p{font-size:.97rem;color:#444;margin-bottom:16px}
+.t-card cite{font-style:normal;font-weight:700;font-size:.92rem;color:var(--dark)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;counter-reset:step}
+.step{background:var(--light);border-radius:14px;padding:28px 24px;border:1px solid #e9e9e9}
+.step .n{font-family:'Archivo',sans-serif;font-weight:800;font-size:2.4rem;color:var(--accent);line-height:1;margin-bottom:12px}
+.step h3{margin-bottom:8px;font-size:1.08rem}
+.step p{font-size:.94rem;color:#555}
+/* CTA band */
+.cta-band{background:linear-gradient(135deg,var(--primary),#173eab);color:#fff;text-align:center;padding:70px 22px}
+.cta-band h2{color:#fff;font-size:clamp(1.7rem,3.6vw,2.6rem);margin-bottom:14px}
+.cta-band p{max-width:600px;margin:0 auto 30px;opacity:.92;font-size:1.08rem}
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:10px}
+.contact-card{text-align:center;background:var(--light);border:1px solid #e9e9e9;border-radius:14px;padding:34px 24px}
+.contact-card .ic{font-size:2rem;margin-bottom:12px}
+.contact-card h3{margin-bottom:8px}
+.contact-card a.big{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.35rem;color:var(--primary)}
+.contact-card a.big:hover{color:var(--accent)}
+.contact-card p{font-size:.92rem;color:#666;margin-top:8px}
+/* Footer */
+footer{background:#111;color:#999;padding:36px 0;font-size:.9rem}
+footer .container{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}
+footer strong{color:#ddd}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="nav-inner">
+  <a href="#top" class="brand">Spencer <span>Roofs</span></a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a class="btn btn-sm" href="tel:+16302447663" style="color:#fff">(630) 244-7663</a>
+  </div>
+</div></nav>
+
+<header class="hero" id="top"><div class="container">
+  <h1>Elmhurst’s Roofing Company for <em>Generations</em> of Neighbors</h1>
+  <p>New roof installation, repairs, reroofs, and tear-offs — quality workmanship at affordable prices, with an A+ BBB rating to prove it.</p>
+  <div class="hero-ctas">
+    <a class="btn" href="tel:+16302447663">Call (630) 244-7663</a>
+    <a class="btn btn-outline" href="#contact">Get a Free Estimate</a>
+  </div>
+  <div class="hero-badges">
+    <span><i>✓</i>A+ BBB Rating</span>
+    <span><i>✓</i>100% Satisfaction Guarantee</span>
+    <span><i>✓</i>Licensed IL #104-007629</span>
+    <span><i>✓</i>Free Estimates</span>
+  </div>
+</div></header>
+
+<div class="trust"><div class="container"><div class="trust-grid">
+    <div class="trust-item"><strong>A+</strong><span>BBB Rating</span></div>
+    <div class="trust-item"><strong>Hundreds</strong><span>Roofs Installed</span></div>
+    <div class="trust-item"><strong>Residential</strong><span>& Commercial</span></div>
+    <div class="trust-item"><strong>IL Licensed</strong><span>#104-007629</span></div>
+</div></div></div>
+
+<section id="services"><div class="container">
+  <div class="sec-kicker">What we do</div>
+  <h2 class="sec-title">Every Type of Roof Work, Done Right</h2>
+  <p class="sec-sub">From a small repair to a full tear-off, one local team handles it all.</p>
+  <div class="svc-grid">
+    <div class="svc"><div class="svc-icon">&#9679;</div><h3>New Roof Installation</h3><p>Complete new roofs for homes and businesses — quality materials, installed with care.</p></div>
+    <div class="svc"><div class="svc-icon">&#9679;</div><h3>Roof Repair</h3><p>Leak repairs and storm damage fixes done quickly, before a small issue becomes a big bill.</p></div>
+    <div class="svc"><div class="svc-icon">&#9679;</div><h3>Reroofs & Tear-offs</h3><p>Full tear-offs and reroofs that give your home a fresh, long-lasting roof system.</p></div>
+    <div class="svc"><div class="svc-icon">&#9679;</div><h3>Residential Roofs</h3><p>Homes across Elmhurst and the western suburbs — protection and curb appeal in one.</p></div>
+    <div class="svc"><div class="svc-icon">&#9679;</div><h3>Commercial & Flat Roofs</h3><p>Flat and low-slope roofing for commercial properties, built to handle Midwest weather.</p></div>
+    <div class="svc"><div class="svc-icon">&#9679;</div><h3>Siding & Gutters</h3><p>Roofing, siding, and gutter services from one trusted local contractor.</p></div>
+  </div>
+</div></section>
+
+<section class="why" id="why"><div class="container">
+  <div class="sec-kicker" style="color:#f59e0b">Why choose us</div>
+  <h2 class="sec-title">The Local Team You Can Count On</h2>
+  <p class="sec-sub">Insist on a local roofing company that has served the western suburbs for years.</p>
+  <div class="why-grid">
+    <div class="why-card"><div class="n">01</div><h3>Experienced Roofers</h3><p>Hundreds of roofs installed by a team that pays attention to every detail.</p></div>
+    <div class="why-card"><div class="n">02</div><h3>Quality Workmanship</h3><p>We do the job right — backed by our 100% satisfaction guarantee.</p></div>
+    <div class="why-card"><div class="n">03</div><h3>Affordable Prices</h3><p>Competitive pricing on every project, without cutting corners.</p></div>
+    <div class="why-card"><div class="n">04</div><h3>Top-Grade Materials</h3><p>High-quality materials that protect your home and keep energy costs down.</p></div>
+  </div>
+</div></section>
+
+<section id="reviews"><div class="container">
+  <div class="sec-kicker">How it works</div>
+  <h2 class="sec-title">Getting Your Roof Done Is Easy</h2>
+  <p class="sec-sub">Three simple steps from first call to a finished roof.</p>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>Free Estimate</h3><p>Call (630) 244-7663 or use our contact form. We assess your roof and give you a clear, written estimate.</p></div>
+    <div class="step"><div class="n">2</div><h3>Quality Install</h3><p>Our experienced crew installs your roof with care, using only high-quality materials.</p></div>
+    <div class="step"><div class="n">3</div><h3>Satisfaction Guaranteed</h3><p>We do not leave until you are 100% happy — that is our guarantee.</p></div>
+  </div>
+</div></section>
+
+<div class="cta-band">
+  <h2>Call Today for Your Free Roofing Estimate</h2>
+  <p>Serving Elmhurst, Addison, Lombard, Villa Park, Oak Brook, and the western suburbs.</p>
+  <a class="btn" href="tel:+16302447663" style="background:#fff;color:var(--dark)">Call (630) 244-7663 Today</a>
+</div>
+
+<section id="contact"><div class="container">
+  <div class="sec-kicker">Get in touch</div>
+  <h2 class="sec-title">Request Your Free Estimate</h2>
+  <p class="sec-sub">Call or email us today — calls are answered by a real local team member.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="ic">&#9742;</div>
+      <h3>Call Us</h3>
+      <a class="big" href="tel:+16302447663">(630) 244-7663</a>
+      <p>Mon–Fri: 8 AM – 6 PM</p>
+    </div>
+        <div class="contact-card"><div class="ic">&#9998;</div><h3>Online Form</h3><p style="font-size:1rem;color:#333">Visit our <a href="https://spencerroofs.com/contact/" style="color:var(--primary);font-weight:700">contact page</a><br>to request a free quote online.</p></div>
+    <div class="contact-card">
+      <div class="ic">&#9873;</div>
+      <h3>Visit Us</h3>
+      <p style="font-size:1.05rem;color:#333"><strong>Elmhurst, IL</strong><br>799 Linden, Elmhurst, IL 60126</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="container">
+  <div><strong>Spencer Roofs Inc.</strong> &mdash; Elmhurst’s Local Roofer. Serving Elmhurst and DuPage County’s western suburbs.</div>
+  <div>&copy; 2026 Spencer Roofs Inc.. All rights reserved. IL License #104-007629</div>
+</div></div></footer>
+
+</body>
+</html>
